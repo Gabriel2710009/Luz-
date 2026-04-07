@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LUZÉ Pelotero & Eventos – Fiestas infantiles completas en San Luis, Argentina. Carrusel, inflables, animación y mucho más." />
+  <title>LUZÉ Pelotero & Eventos | San Luis, Argentina</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            luze: {
+              gold:    '#F5C842',
+              coral:   '#FF6B5B',
+              violet:  '#7B5EA7',
+              cream:   '#FFF8EE',
+              dark:    '#1A1025',
+              mid:     '#2D1F45',
+              soft:    '#F7F2FF',
+            }
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            body:    ['"DM Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="font-body bg-luze-dark text-white overflow-x-hidden">
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center gap-2 group">
+        <span class="logo-star text-luze-gold text-2xl">✦</span>
+        <span class="font-display font-900 text-2xl tracking-tight text-white group-hover:text-luze-gold transition-colors duration-300">LUZÉ</span>
+        <span class="text-xs font-body text-white/50 uppercase tracking-widest hidden sm:block pt-1">Pelotero & Eventos</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#experiencia" class="nav-link text-white/70 hover:text-white text-sm font-medium tracking-wide transition-colors duration-200">Experiencia</a>
+        <a href="#diferenciales" class="nav-link text-white/70 hover:text-white text-sm font-medium tracking-wide transition-colors duration-200">Diferenciales</a>
+        <a href="#galeria" class="nav-link text-white/70 hover:text-white text-sm font-medium tracking-wide transition-colors duration-200">Galería</a>
+        <a href="#planes" class="nav-link text-white/70 hover:text-white text-sm font-medium tracking-wide transition-colors duration-200">Planes</a>
+        <a href="https://wa.me/5492664000000?text=Hola!%20Quiero%20consultar%20por%20una%20fiesta%20en%20LUZÉ"
+           target="_blank" rel="noopener"
+           class="btn-primary px-5 py-2.5 rounded-full text-sm font-semibold">
+          Reservar ahora
+        </a>
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2 group" aria-label="Menú">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line short"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu md:hidden">
+      <nav class="flex flex-col gap-2 px-6 pb-6">
+        <a href="#experiencia" class="mobile-nav-link">Experiencia</a>
+        <a href="#diferenciales" class="mobile-nav-link">Diferenciales</a>
+        <a href="#galeria" class="mobile-nav-link">Galería</a>
+        <a href="#planes" class="mobile-nav-link">Planes</a>
+        <a href="#testimonios" class="mobile-nav-link">Testimonios</a>
+        <a href="https://wa.me/5492664000000?text=Hola!%20Quiero%20consultar%20por%20una%20fiesta%20en%20LUZÉ"
+           target="_blank" rel="noopener"
+           class="btn-primary mt-2 px-6 py-3 rounded-2xl text-center font-semibold">
+          Reservar por WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section id="hero" class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
+
+    <!-- Background mesh -->
+    <div class="hero-bg absolute inset-0"></div>
+    <div class="hero-glow hero-glow-1 absolute"></div>
+    <div class="hero-glow hero-glow-2 absolute"></div>
+    <div class="floating-shapes absolute inset-0 pointer-events-none"></div>
+
+    <!-- Floating decorative elements -->
+    <div class="float-el float-star text-luze-gold text-4xl absolute top-1/4 left-[8%] opacity-40">✦</div>
+    <div class="float-el float-circle bg-luze-coral/20 w-16 h-16 rounded-full absolute top-1/3 right-[10%]"></div>
+    <div class="float-el float-star text-luze-violet/60 text-2xl absolute bottom-1/3 left-[15%]">◆</div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+
+      <!-- Badge -->
+      <div class="animate-in-up inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
+        <span class="w-2 h-2 bg-luze-gold rounded-full animate-pulse"></span>
+        <span class="text-sm text-white/80 font-medium tracking-wide">San Luis, Argentina · Fiestas que se recuerdan</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="animate-in-up delay-1 font-display font-black leading-none mb-6">
+        <span class="block text-5xl sm:text-7xl lg:text-8xl text-white">La fiesta perfecta</span>
+        <span class="block text-5xl sm:text-7xl lg:text-8xl gradient-text mt-1">que tu hijo merece.</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="animate-in-up delay-2 text-lg sm:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Eventos infantiles completos con animación, inflables, carrusel y mucho más.
+        <strong class="text-white/90 font-medium">Vos disfrutás. Los chicos no paran.</strong>
+      </p>
+
+      <!-- CTAs -->
+      <div class="animate-in-up delay-3 flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="https://wa.me/5492664000000?text=Hola!%20Quiero%20reservar%20una%20fiesta%20en%20LUZÉ"
+           target="_blank" rel="noopener"
+           class="btn-whatsapp group flex items-center gap-3 px-8 py-4 rounded-2xl font-semibold text-lg w-full sm:w-auto justify-center">
+          <svg class="w-6 h-6 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Reservar mi fiesta
+        </a>
+
+        <a href="#galeria" class="btn-ghost flex items-center gap-2 px-8 py-4 rounded-2xl font-semibold text-lg w-full sm:w-auto justify-center group">
+          Ver galería
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Hero stats -->
+      <div class="animate-in-up delay-4 grid grid-cols-3 gap-4 max-w-lg mx-auto mt-16">
+        <div class="stat-pill">
+          <span class="stat-number font-display font-bold text-2xl text-luze-gold">+500</span>
+          <span class="stat-label text-xs text-white/50">Fiestas realizadas</span>
+        </div>
+        <div class="stat-pill border-l border-r border-white/10">
+          <span class="stat-number font-display font-bold text-2xl text-luze-gold">3hs</span>
+          <span class="stat-label text-xs text-white/50">Evento completo</span>
+        </div>
+        <div class="stat-pill">
+          <span class="stat-number font-display font-bold text-2xl text-luze-gold">100%</span>
+          <span class="stat-label text-xs text-white/50">Familias felices</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator">
+      <div class="w-6 h-10 border-2 border-white/20 rounded-full flex items-start justify-center p-1">
+        <div class="w-1 h-2 bg-luze-gold rounded-full scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       EXPERIENCIA
+  ============================================================ -->
+  <section id="experiencia" class="py-28 relative overflow-hidden">
+    <div class="section-divider-top absolute top-0 left-0 right-0"></div>
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <!-- Section header -->
+      <div class="text-center mb-20 reveal">
+        <span class="section-tag">La experiencia completa</span>
+        <h2 class="font-display font-black text-4xl sm:text-6xl text-white mt-4 leading-tight">
+          Pensado para todos.<br/>
+          <span class="gradient-text">Sin excluir a nadie.</span>
+        </h2>
+        <p class="text-white/50 mt-4 max-w-xl mx-auto text-lg">
+          Chicos que explotan de diversión. Papás que por fin pueden respirar.
+        </p>
+      </div>
+
+      <!-- Grid experiencia -->
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Chicos -->
+        <div class="exp-card reveal reveal-left group">
+          <div class="exp-card-header bg-gradient-to-br from-luze-coral/20 to-luze-gold/10">
+            <div class="exp-icon">🎉</div>
+            <h3 class="font-display font-bold text-3xl text-white">Para los chicos</h3>
+            <p class="text-white/60 mt-2">Un universo de diversión diseñado a su medida</p>
+          </div>
+          <ul class="exp-list">
+            <li class="exp-item">
+              <span class="exp-bullet bg-luze-coral/20 text-luze-coral">🎠</span>
+              <div>
+                <strong class="text-white">Carrusel infantil</strong>
+                <p class="text-white/50 text-sm">Nuestro diferencial exclusivo. El único en la zona.</p>
+              </div>
+            </li>
+            <li class="exp-item">
+              <span class="exp-bullet bg-luze-gold/20 text-luze-gold">🏰</span>
+              <div>
+                <strong class="text-white">Pelotero + Laberinto</strong>
+                <p class="text-white/50 text-sm">Enormes. Los chicos no quieren salir.</p>
+              </div>
+            </li>
+            <li class="exp-item">
+              <span class="exp-bullet bg-luze-violet/20 text-luze-violet">🎪</span>
+              <div>
+                <strong class="text-white">Inflables grandes</strong>
+                <p class="text-white/50 text-sm">Toboganes y castillos de primera línea.</p>
+              </div>
+            </li>
+            <li class="exp-item">
+              <span class="exp-bullet bg-luze-coral/20 text-luze-coral">🎭</span>
+              <div>
+                <strong class="text-white">Animación incluida</strong>
+                <p class="text-white/50 text-sm">Juegos, bailes y shows para toda la fiesta.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Adultos -->
+        <div class="exp-card reveal reveal-right group">
+          <div class="exp-card-header bg-gradient-to-br from-luze-violet/20 to-luze-gold/10">
+            <div class="exp-icon">🥂</div>
+            <h3 class="font-display font-bold text-3xl text-white">Para los adultos</h3>
+            <p class="text-white/60 mt-2">Porque vos también merecés disfrutar</p>
+          </div>
+          <ul class="exp-list">
+            <li class="exp-item">
+              <span class="exp-bullet bg-luze-gold/20 text-luze-gold">🛋️</span>
+              <div>
+                <strong class="text-white">Sector exclusivo adultos</strong>
+                <p class="text-white/50 text-sm">Mesas, sillas y espacio propio para compartir.</p>
+              </div>
+            </li>
+            <li class="exp-item">
+              <span class="exp-bullet bg-luze-coral/20 text-luze-coral">🍕</span>
+              <div>
+                <strong class="text-white">Comida + bebidas</strong>
+                <p class="text-white/50 text-sm">Incluido en el plan. Nada que resolver.</p>
+              </div>
+            </li>
+            <li class="exp-item">
+              <span class="exp-bullet bg-luze-violet/20 text-luze-violet">❄️</span>
+              <div>
+                <strong class="text-white">Salón climatizado</strong>
+                <p class="text-white/50 text-sm">Cómodo todo el año, llueva o haga calor.</p>
+              </div>
+            </li>
+            <li class="exp-item">
+              <span class="exp-bullet bg-luze-gold/20 text-luze-gold">📸</span>
+              <div>
+                <strong class="text-white">Evento organizado</strong>
+                <p class="text-white/50 text-sm">Nosotros coordinamos todo. Vos solo disfrutás.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       DIFERENCIALES
+  ============================================================ -->
+  <section id="diferenciales" class="py-28 bg-luze-mid/40 relative overflow-hidden">
+    <div class="diff-bg-pattern absolute inset-0 opacity-5 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-20 reveal">
+        <span class="section-tag">Por qué elegirnos</span>
+        <h2 class="font-display font-black text-4xl sm:text-6xl text-white mt-4 leading-tight">
+          No somos un pelotero más.<br/>
+          <span class="gradient-text">Somos la experiencia.</span>
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Card: Carrusel -->
+        <div class="diff-card reveal group" style="--delay: 0ms">
+          <div class="diff-card-inner">
+            <div class="diff-icon-wrap bg-gradient-to-br from-luze-coral to-luze-gold">
+              <span class="text-3xl">🎠</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mt-5 mb-2">Carrusel infantil</h3>
+            <p class="text-white/50 text-sm leading-relaxed">El único en San Luis. Una atracción que hace la diferencia y que los chicos no olvidan.</p>
+            <div class="diff-card-glow"></div>
+          </div>
+        </div>
+
+        <!-- Card: Juegos grandes -->
+        <div class="diff-card reveal group" style="--delay: 100ms">
+          <div class="diff-card-inner">
+            <div class="diff-icon-wrap bg-gradient-to-br from-luze-violet to-luze-coral">
+              <span class="text-3xl">🏰</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mt-5 mb-2">Juegos de gran escala</h3>
+            <p class="text-white/50 text-sm leading-relaxed">Inflables, laberinto y pelotero de tamaño real. Horas de diversión sin parar.</p>
+            <div class="diff-card-glow"></div>
+          </div>
+        </div>
+
+        <!-- Card: Evento organizado -->
+        <div class="diff-card reveal group" style="--delay: 200ms">
+          <div class="diff-card-inner">
+            <div class="diff-icon-wrap bg-gradient-to-br from-luze-gold to-luze-violet">
+              <span class="text-3xl">🎯</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mt-5 mb-2">Todo organizado</h3>
+            <p class="text-white/50 text-sm leading-relaxed">Animadores, catering, decoración. Todo coordinado. Cero estrés para los papás.</p>
+            <div class="diff-card-glow"></div>
+          </div>
+        </div>
+
+        <!-- Card: Climatización -->
+        <div class="diff-card reveal group" style="--delay: 300ms">
+          <div class="diff-card-inner">
+            <div class="diff-icon-wrap bg-gradient-to-br from-luze-coral to-luze-violet">
+              <span class="text-3xl">❄️</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mt-5 mb-2">Confort todo el año</h3>
+            <p class="text-white/50 text-sm leading-relaxed">Salón climatizado con frío y calor. La fiesta perfecta sin importar el clima.</p>
+            <div class="diff-card-glow"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Feature strip -->
+      <div class="feature-strip reveal mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="feature-strip-item">
+          <span class="text-luze-gold font-bold text-lg">3 horas</span>
+          <span class="text-white/40 text-sm">de evento completo</span>
+        </div>
+        <div class="feature-strip-item">
+          <span class="text-luze-gold font-bold text-lg">Animación</span>
+          <span class="text-white/40 text-sm">incluida siempre</span>
+        </div>
+        <div class="feature-strip-item">
+          <span class="text-luze-gold font-bold text-lg">Catering</span>
+          <span class="text-white/40 text-sm">sin complicaciones</span>
+        </div>
+        <div class="feature-strip-item">
+          <span class="text-luze-gold font-bold text-lg">Reserva</span>
+          <span class="text-white/40 text-sm">fácil por WhatsApp</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       GALERÍA
+  ============================================================ -->
+  <section id="galeria" class="py-28 relative overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16 reveal">
+        <span class="section-tag">Galería</span>
+        <h2 class="font-display font-black text-4xl sm:text-6xl text-white mt-4">
+          Ver para creer.
+        </h2>
+        <p class="text-white/50 mt-4 text-lg">Momentos reales de fiestas reales en LUZÉ</p>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div id="gallery-grid" class="gallery-grid reveal">
+
+        <div class="gallery-item gallery-item--large" data-index="0">
+          <div class="gallery-placeholder gallery-placeholder--1">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <span class="text-4xl">🎠</span>
+                <p class="text-white font-semibold mt-2">Carrusel infantil</p>
+              </div>
+            </div>
+            <div class="gallery-label">Carrusel ✦</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-index="1">
+          <div class="gallery-placeholder gallery-placeholder--2">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <span class="text-4xl">🏰</span>
+                <p class="text-white font-semibold mt-2">Pelotero gigante</p>
+              </div>
+            </div>
+            <div class="gallery-label">Pelotero</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-index="2">
+          <div class="gallery-placeholder gallery-placeholder--3">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <span class="text-4xl">🎭</span>
+                <p class="text-white font-semibold mt-2">Show de animación</p>
+              </div>
+            </div>
+            <div class="gallery-label">Animación</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-index="3">
+          <div class="gallery-placeholder gallery-placeholder--4">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <span class="text-4xl">🎪</span>
+                <p class="text-white font-semibold mt-2">Inflables grandes</p>
+              </div>
+            </div>
+            <div class="gallery-label">Inflables</div>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-item--wide" data-index="4">
+          <div class="gallery-placeholder gallery-placeholder--5">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <span class="text-4xl">🎂</span>
+                <p class="text-white font-semibold mt-2">El momento del festejo</p>
+              </div>
+            </div>
+            <div class="gallery-label">El momento especial ✦</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-index="5">
+          <div class="gallery-placeholder gallery-placeholder--6">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <span class="text-4xl">🛋️</span>
+                <p class="text-white font-semibold mt-2">Sector adultos</p>
+              </div>
+            </div>
+            <div class="gallery-label">Sector adultos</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PLANES
+  ============================================================ -->
+  <section id="planes" class="py-28 bg-luze-mid/30 relative overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-20 reveal">
+        <span class="section-tag">Planes & Precios</span>
+        <h2 class="font-display font-black text-4xl sm:text-6xl text-white mt-4">
+          La fiesta que<br/>
+          <span class="gradient-text">se adapta a vos.</span>
+        </h2>
+        <p class="text-white/50 mt-4 text-lg max-w-lg mx-auto">Consultá disponibilidad y armamos el plan ideal para tu familia.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 items-stretch">
+
+        <!-- Plan Básico -->
+        <div class="plan-card reveal reveal-left group">
+          <div class="plan-tag">Básico</div>
+          <div class="plan-icon">🎈</div>
+          <h3 class="font-display font-bold text-2xl text-white mb-1">Fiesta Básica</h3>
+          <p class="text-white/40 text-sm mb-6">Todo lo esencial para una gran fiesta</p>
+          <ul class="plan-features">
+            <li><span class="plan-check">✓</span> Pelotero + laberinto</li>
+            <li><span class="plan-check">✓</span> 1 inflable grande</li>
+            <li><span class="plan-check">✓</span> Animación 3 horas</li>
+            <li><span class="plan-check">✓</span> Salón climatizado</li>
+            <li class="plan-feature--disabled"><span>✗</span> Carrusel infantil</li>
+            <li class="plan-feature--disabled"><span>✗</span> Catering incluido</li>
+          </ul>
+          <a href="https://wa.me/5492664000000?text=Hola!%20Quiero%20consultar%20el%20plan%20Básico%20de%20LUZÉ"
+             target="_blank" rel="noopener"
+             class="plan-cta-secondary mt-8 block text-center">
+            Consultar precio
+          </a>
+        </div>
+
+        <!-- Plan Completo (FEATURED) -->
+        <div class="plan-card plan-card--featured reveal group">
+          <div class="plan-badge">Más elegido ⭐</div>
+          <div class="plan-tag plan-tag--featured">Completo</div>
+          <div class="plan-icon">🎠</div>
+          <h3 class="font-display font-bold text-2xl text-white mb-1">Fiesta Completa</h3>
+          <p class="text-white/60 text-sm mb-6">La experiencia LUZÉ al 100%</p>
+          <ul class="plan-features">
+            <li><span class="plan-check plan-check--gold">✓</span> Todo del plan básico</li>
+            <li><span class="plan-check plan-check--gold">✓</span> Carrusel infantil</li>
+            <li><span class="plan-check plan-check--gold">✓</span> 2 inflables grandes</li>
+            <li><span class="plan-check plan-check--gold">✓</span> Catering completo</li>
+            <li><span class="plan-check plan-check--gold">✓</span> Sector adultos equipado</li>
+            <li><span class="plan-check plan-check--gold">✓</span> Animación premium</li>
+          </ul>
+          <a href="https://wa.me/5492664000000?text=Hola!%20Quiero%20reservar%20el%20plan%20Completo%20de%20LUZÉ"
+             target="_blank" rel="noopener"
+             class="btn-whatsapp mt-8 flex items-center justify-center gap-2 py-3 rounded-xl font-semibold">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Reservar este plan
+          </a>
+        </div>
+
+        <!-- Plan Personalizado -->
+        <div class="plan-card reveal reveal-right group">
+          <div class="plan-tag">A medida</div>
+          <div class="plan-icon">✨</div>
+          <h3 class="font-display font-bold text-2xl text-white mb-1">Plan Personalizado</h3>
+          <p class="text-white/40 text-sm mb-6">Diseñamos la fiesta exacta que imaginás</p>
+          <ul class="plan-features">
+            <li><span class="plan-check">✓</span> Elegís cada detalle</li>
+            <li><span class="plan-check">✓</span> Temática especial</li>
+            <li><span class="plan-check">✓</span> Decoración a medida</li>
+            <li><span class="plan-check">✓</span> Menú personalizado</li>
+            <li><span class="plan-check">✓</span> Servicios adicionales</li>
+            <li><span class="plan-check">✓</span> Asesoramiento total</li>
+          </ul>
+          <a href="https://wa.me/5492664000000?text=Hola!%20Quiero%20armar%20una%20fiesta%20personalizada%20en%20LUZÉ"
+             target="_blank" rel="noopener"
+             class="plan-cta-secondary mt-8 block text-center">
+            Hablemos de tu fiesta
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       TESTIMONIOS
+  ============================================================ -->
+  <section id="testimonios" class="py-28 relative overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-20 reveal">
+        <span class="section-tag">Testimonios</span>
+        <h2 class="font-display font-black text-4xl sm:text-6xl text-white mt-4">
+          Lo que dicen las<br/>
+          <span class="gradient-text">familias LUZÉ.</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="testimonial-card reveal reveal-left">
+          <div class="stars">★★★★★</div>
+          <blockquote class="text-white/80 leading-relaxed mt-4 mb-6">
+            "No podía creer lo organizados que estaban. Mi hijo no quería irse. El carrusel fue lo mejor de la noche, todos los nenes enloquecieron."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar bg-gradient-to-br from-luze-coral to-luze-gold">M</div>
+            <div>
+              <p class="text-white font-semibold">Mariela González</p>
+              <p class="text-white/40 text-sm">Mamá de Tomás, 5 años</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <blockquote class="text-white/80 leading-relaxed mt-4 mb-6">
+            "Por primera vez en una fiesta infantil pude sentarme y disfrutar como papá. Ellos se encargaron de absolutamente todo. Increíble."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar bg-gradient-to-br from-luze-violet to-luze-coral">R</div>
+            <div>
+              <p class="text-white font-semibold">Roberto Fernández</p>
+              <p class="text-white/40 text-sm">Papá de Sofía, 7 años</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-right">
+          <div class="stars">★★★★★</div>
+          <blockquote class="text-white/80 leading-relaxed mt-4 mb-6">
+            "El salón es hermoso, la comida estuvo muy buena y la animación fue top. Ya estamos pensando en el cumple del año que viene acá."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar bg-gradient-to-br from-luze-gold to-luze-violet">C</div>
+            <div>
+              <p class="text-white font-semibold">Carla Ramos</p>
+              <p class="text-white/40 text-sm">Mamá de Mateo, 4 años</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CTA FINAL
+  ============================================================ -->
+  <section id="cta-final" class="py-28 relative overflow-hidden">
+    <div class="cta-bg absolute inset-0"></div>
+    <div class="cta-glow absolute"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center reveal">
+      <span class="section-tag">¿Estás listo?</span>
+      <h2 class="font-display font-black text-5xl sm:text-7xl text-white mt-6 leading-tight">
+        Los mejores cumples<br/>
+        <span class="gradient-text">no se improvisan.</span>
+      </h2>
+      <p class="text-white/60 mt-6 text-xl max-w-2xl mx-auto leading-relaxed">
+        Los fines de semana se agotan rápido. Asegurá la fecha antes de que se ocupe.
+      </p>
+
+      <div class="urgency-bar mt-8 mb-10">
+        <span class="w-2 h-2 bg-luze-coral rounded-full animate-pulse inline-block"></span>
+        <span class="text-white/70 text-sm ml-2">Agenda con disponibilidad limitada · Próximas fechas llenándose</span>
+      </div>
+
+      <a href="https://wa.me/5492664000000?text=Hola!%20Quiero%20asegurar%20una%20fecha%20en%20LUZÉ%20para%20el%20cumpleaños%20de%20mi%20hijo"
+         target="_blank" rel="noopener"
+         class="btn-whatsapp-xl group inline-flex items-center gap-4 px-10 py-5 rounded-2xl font-bold text-xl">
+        <svg class="w-7 h-7 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Quiero asegurar mi fecha
+      </a>
+
+      <p class="text-white/30 text-sm mt-6">Respuesta inmediata · Sin compromiso · 100% personalizado</p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="bg-luze-dark border-t border-white/5 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid md:grid-cols-3 gap-12 pb-12 border-b border-white/5">
+
+        <!-- Brand -->
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-luze-gold text-2xl">✦</span>
+            <span class="font-display font-bold text-2xl text-white">LUZÉ</span>
+          </div>
+          <p class="text-white/40 text-sm leading-relaxed max-w-xs">
+            Fiestas infantiles completas en San Luis, Argentina. Diversión total, sin estrés para los papás.
+          </p>
+          <div class="flex gap-4 mt-6">
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://wa.me/5492664000000" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div>
+          <h4 class="text-white font-semibold mb-4">Información</h4>
+          <ul class="space-y-3 text-white/40 text-sm">
+            <li class="flex items-start gap-2">
+              <span class="text-luze-gold mt-0.5">📍</span>
+              <span>San Luis, Argentina<br/>Consultá dirección exacta por WhatsApp</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-luze-gold">📞</span>
+              <a href="tel:+5492664000000" class="hover:text-white transition-colors">+54 9 266 400-0000</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-luze-gold">⏰</span>
+              <span>Eventos Sáb y Dom</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CTA -->
+        <div>
+          <h4 class="text-white font-semibold mb-4">¿Listo para reservar?</h4>
+          <p class="text-white/40 text-sm mb-5">Escribinos ahora y te respondemos en minutos.</p>
+          <a href="https://wa.me/5492664000000?text=Hola!%20Quiero%20información%20sobre%20LUZÉ%20Pelotero"
+             target="_blank" rel="noopener"
+             class="btn-whatsapp inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Escribir por WhatsApp
+          </a>
+        </div>
+
+      </div>
+
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8">
+        <p class="text-white/20 text-sm">© 2025 LUZÉ Pelotero & Eventos · San Luis, Argentina</p>
+        <p class="text-white/20 text-xs">Hecho con ✦ para las familias de San Luis</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       WHATSAPP FLOATING BUTTON
+  ============================================================ -->
+  <a id="whatsapp-float"
+     href="https://wa.me/5492664000000?text=Hola!%20Quiero%20consultar%20por%20una%20fiesta%20en%20LUZÉ"
+     target="_blank" rel="noopener"
+     class="whatsapp-float"
+     aria-label="Contactar por WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-tooltip">¡Reservar ahora!</span>
+  </a>
+
+
+  <!-- ============================================================
+       LIGHTBOX MODAL
+  ============================================================ -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Galería de imágenes">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-container">
+      <button id="lightbox-close" class="lightbox-close" aria-label="Cerrar">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <div id="lightbox-content" class="lightbox-content"></div>
+    </div>
+  </div>
+
+
+  <!-- JavaScript (order matters) -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/gallery.js"></script>
+
+</body>
+</html>
