@@ -18,6 +18,7 @@
   };
 
   const STAGGER_DELAY = 120; // ms entre cada card en un grupo
+  const heroSection = document.querySelector('#hero');
 
   /* ── Reveal Observer (fade + slide) ────────────────────── */
   const revealObserver = new IntersectionObserver((entries) => {
@@ -107,6 +108,21 @@
   const floatingEls = document.querySelectorAll('.float-el');
 
   let parallaxTicking = false;
+  let pointerX = 0.5;
+  let pointerY = 0.35;
+
+  if (heroSection) {
+    heroSection.addEventListener('pointermove', (event) => {
+      const rect = heroSection.getBoundingClientRect();
+      pointerX = Math.min(Math.max((event.clientX - rect.left) / rect.width, 0), 1);
+      pointerY = Math.min(Math.max((event.clientY - rect.top) / rect.height, 0), 1);
+    }, { passive: true });
+
+    heroSection.addEventListener('pointerleave', () => {
+      pointerX = 0.5;
+      pointerY = 0.35;
+    });
+  }
 
   function updateParallax() {
     const scrollY = window.scrollY;
@@ -123,13 +139,17 @@
     heroGlows.forEach((glow, i) => {
       const direction = i % 2 === 0 ? 1 : -1;
       const speed = 0.3 + (i * 0.1);
-      glow.style.transform = `translateY(${scrollY * speed * direction}px)`;
+      const driftX = (pointerX - 0.5) * (i === 0 ? 48 : -32);
+      const driftY = (pointerY - 0.35) * (i === 0 ? 28 : 18);
+      glow.style.transform = `translate3d(${driftX}px, ${scrollY * speed * direction + driftY}px, 0)`;
     });
 
     // Mover floating elements
     floatingEls.forEach((el, i) => {
       const speed = 0.2 + (i * 0.08);
-      el.style.transform = `translateY(${scrollY * speed}px)`;
+      const driftX = (pointerX - 0.5) * (18 + i * 6);
+      const driftY = (pointerY - 0.35) * (12 + i * 4);
+      el.style.transform = `translate3d(${driftX}px, ${scrollY * speed + driftY}px, 0)`;
     });
 
     // Fade out hero content on scroll
@@ -137,6 +157,7 @@
     if (heroContent) {
       const opacity = Math.max(0, 1 - progress * 1.8);
       heroContent.style.opacity = opacity;
+      heroContent.style.transform = `translate3d(0, ${scrollY * 0.08}px, 0)`;
     }
 
     parallaxTicking = false;
@@ -202,6 +223,10 @@
     if (window.matchMedia('(min-width: 768px) and (pointer: fine)').matches) {
       document.querySelectorAll('.diff-card').forEach(addTiltEffect);
     }
+
+    document.querySelectorAll('.contact-card, .map-card, .location-scene, .legal-card').forEach((el) => {
+      el.style.willChange = 'transform';
+    });
 
     // Inicializar estados de las cards para stagger
     document.querySelectorAll('.diff-card, .plan-card, .testimonial-card').forEach(card => {

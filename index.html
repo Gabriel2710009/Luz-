@@ -22,13 +22,13 @@
         extend: {
           colors: {
             luze: {
-              gold:    '#F5C842',
-              coral:   '#FF6B5B',
-              violet:  '#7B5EA7',
-              cream:   '#FFF8EE',
-              dark:    '#1A1025',
-              mid:     '#2D1F45',
-              soft:    '#F7F2FF',
+              gold:    '#FFC20E',
+              coral:   '#F47920',
+              violet:  '#29ABE2',
+              cream:   '#FFF7D6',
+              dark:    '#000000',
+              mid:     '#111111',
+              soft:    '#171717',
             }
           },
           fontFamily: {
@@ -54,7 +54,7 @@
 
       <!-- Logo -->
       <a href="#hero" class="flex items-center gap-2 group">
-        <img src="https://luze.yzz.me/Images/icono%20TP.png" alt="LUZE" class="brand-mark logo-star" />
+        <img src="https://res.cloudinary.com/dvdik8dux/image/upload/q_auto/f_auto/v1775540768/icono_TP1_uyu0fc.png" alt="LUZE" class="brand-mark logo-star" />
         <span class="font-display font-900 text-2xl tracking-tight text-white group-hover:text-luze-gold transition-colors duration-300">LUZÉ</span>
         <span class="text-xs font-body text-white/50 uppercase tracking-widest hidden sm:block pt-1">Pelotero & Eventos</span>
       </a>
@@ -65,7 +65,7 @@
         <a href="#diferenciales" class="nav-link text-white/70 hover:text-white text-sm font-medium tracking-wide transition-colors duration-200">Diferenciales</a>
         <a href="#galeria" class="nav-link text-white/70 hover:text-white text-sm font-medium tracking-wide transition-colors duration-200">Galería</a>
         <a href="#planes" class="nav-link text-white/70 hover:text-white text-sm font-medium tracking-wide transition-colors duration-200">Planes</a>
-        <a href="#contacto" class="nav-link text-white/70 hover:text-white text-sm font-medium tracking-wide transition-colors duration-200">Contacto</a>
+        <a href="#ubicacion" class="nav-link text-white/70 hover:text-white text-sm font-medium tracking-wide transition-colors duration-200">Ubicación</a>
         <a href="https://wa.me/5492664202046?text=Hola!%20Quiero%20consultar%20por%20una%20fiesta%20en%20LUZÉ"
            target="_blank" rel="noopener"
            class="btn-primary px-5 py-2.5 rounded-full text-sm font-semibold">
@@ -73,22 +73,35 @@
         </a>
       </nav>
 
-      <!-- Mobile hamburger -->
-      <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2 group" aria-label="Menú">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line short"></span>
-      </button>
+      <div class="flex items-center gap-2">
+        <a href="https://www.instagram.com/luze.peloter0/" target="_blank" rel="noopener" class="header-social-icon hidden md:inline-flex" aria-label="Instagram de LUZÉ">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+        <a href="https://wa.me/5492664202046?text=Hola!%20Quiero%20consultar%20por%20una%20fiesta%20en%20LUZÃ‰" target="_blank" rel="noopener" class="header-social-icon header-social-icon--whatsapp hidden md:inline-flex" aria-label="WhatsApp de LUZÉ">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+        </a>
+
+        <!-- Mobile hamburger -->
+        <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2 group" aria-label="Menú" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line short"></span>
+        </button>
+      </div>
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="mobile-menu md:hidden">
+    <div id="mobile-menu" class="mobile-menu md:hidden" aria-hidden="true">
       <nav class="flex flex-col gap-2 px-6 pb-6">
         <a href="#experiencia" class="mobile-nav-link">Experiencia</a>
         <a href="#diferenciales" class="mobile-nav-link">Diferenciales</a>
         <a href="#galeria" class="mobile-nav-link">Galería</a>
         <a href="#planes" class="mobile-nav-link">Planes</a>
-        <a href="#contacto" class="mobile-nav-link">Contacto</a>
+        <a href="#ubicacion" class="mobile-nav-link">Ubicación</a>
         <a href="#testimonios" class="mobile-nav-link">Testimonios</a>
         <a href="https://wa.me/5492664202046?text=Hola!%20Quiero%20consultar%20por%20una%20fiesta%20en%20LUZÉ"
            target="_blank" rel="noopener"
@@ -103,24 +116,17 @@
   <!-- ============================================================
        HERO
   ============================================================ -->
-  <section id="hero" class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
-
-    <!-- Background mesh -->
-    <div class="hero-bg absolute inset-0"></div>
-    <div class="hero-glow hero-glow-1 absolute"></div>
-    <div class="hero-glow hero-glow-2 absolute"></div>
-    <div class="floating-shapes absolute inset-0 pointer-events-none"></div>
-
-    <!-- Floating decorative elements -->
-    <div class="float-el float-star text-luze-gold text-4xl absolute top-1/4 left-[8%] opacity-40" aria-hidden="true">
-      <svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2l2.2 5.8L20 10l-5.8 2.2L12 18l-2.2-5.8L4 10l5.8-2.2L12 2z"/>
-      </svg>
+  <section id="hero" class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden" style="background-image: url('https://luze.yzz.me/Images/hero.png'); background-size: cover; background-position: center;">
+    <div class="hero-bg absolute inset-0 z-0"></div>
+    <div class="absolute inset-0 overflow-hidden z-0">
+      <video class="hero-media hero-media--mobile absolute inset-0 h-full w-full object-cover md:hidden" autoplay muted loop playsinline poster="https://luze.yzz.me/Images/hero.png">
+        <source src="https://luze.yzz.me/Images/Hero.mp4" type="video/mp4" />
+      </video>
+      <img src="https://luze.yzz.me/Images/hero.png" alt="LUZE Pelotero & Eventos" class="hero-media hero-media--desktop absolute inset-0 h-full w-full object-cover hidden md:block" />
     </div>
-    <div class="float-el float-circle bg-luze-coral/20 w-16 h-16 rounded-full absolute top-1/3 right-[10%]"></div>
-    <div class="float-el float-star text-luze-violet/60 text-2xl absolute bottom-1/3 left-[15%]">◆</div>
+    <div class="hero-image-dim absolute inset-0 z-10"></div>
 
-    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+    <div class="relative z-20 max-w-5xl mx-auto px-6 text-center">
 
       <!-- Badge -->
       <div class="animate-in-up inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
@@ -173,14 +179,9 @@
           <span class="stat-number font-display font-bold text-2xl text-luze-gold">100%</span>
           <span class="stat-label text-xs text-white/50">Familias felices</span>
         </div>
-      </div>
     </div>
 
-    <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator">
-      <div class="w-6 h-10 border-2 border-white/20 rounded-full flex items-start justify-center p-1">
-        <div class="w-1 h-2 bg-luze-gold rounded-full scroll-dot"></div>
-      </div>
+    
     </div>
   </section>
 
@@ -306,7 +307,7 @@
   <!-- ============================================================
        DIFERENCIALES
   ============================================================ -->
-  <section id="diferenciales" class="py-28 bg-luze-mid/40 relative overflow-hidden">
+  <section id="diferenciales" class="py-28 bg-transparent relative overflow-hidden">
     <div class="diff-bg-pattern absolute inset-0 opacity-5 pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-6">
@@ -494,7 +495,7 @@
   <!-- ============================================================
        PLANES
   ============================================================ -->
-  <section id="planes" class="py-28 bg-luze-mid/30 relative overflow-hidden">
+  <section id="planes" class="py-28 bg-transparent relative overflow-hidden">
 
     <div class="max-w-7xl mx-auto px-6">
 
@@ -502,9 +503,9 @@
         <span class="section-tag">Planes & Precios</span>
         <h2 class="font-display font-black text-4xl sm:text-6xl text-white mt-4">
           La fiesta que<br/>
-          <span class="gradient-text">se adapta a vos.</span>
+          <span class="gradient-text">les encanta a los chicos.</span>
         </h2>
-        <p class="text-white/50 mt-4 text-lg max-w-lg mx-auto">Consultá disponibilidad y armamos el plan ideal para tu familia.</p>
+        <p class="text-white/50 mt-4 text-lg max-w-lg mx-auto">Consultá disponibilidad y armamos un plan divertido, cómodo y bien de cumpleaños.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8 items-stretch">
@@ -648,120 +649,157 @@
     </div>
   </section>
 
-
   <!-- ============================================================
        CTA FINAL
   ============================================================ -->
-  <section id="cta-final" class="py-28 relative overflow-hidden">
+  <section id="cta-final" class="py-8 sm:py-10 relative overflow-hidden">
     <div class="cta-bg absolute inset-0"></div>
-    <div class="cta-glow absolute"></div>
+    
 
-    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center reveal">
+    <div class="relative z-10 max-w-3xl mx-auto px-6 text-center reveal">
       <span class="section-tag">¿Estás listo?</span>
-      <h2 class="font-display font-black text-5xl sm:text-7xl text-white mt-6 leading-tight">
-        Los mejores cumples<br/>
+      <h2 class="font-display font-black text-3xl sm:text-5xl text-white mt-2 leading-tight">
+        Los mejores cumples
+        <br/>
         <span class="gradient-text">no se improvisan.</span>
       </h2>
-      <p class="text-white/60 mt-6 text-xl max-w-2xl mx-auto leading-relaxed">
+      <p class="text-white/60 mt-2 text-base sm:text-lg max-w-lg mx-auto leading-relaxed">
         Los fines de semana se agotan rápido. Asegurá la fecha antes de que se ocupe.
       </p>
 
-      <div class="urgency-bar mt-8 mb-10">
+      <div class="urgency-bar mt-4 mb-5">
         <span class="w-2 h-2 bg-luze-coral rounded-full animate-pulse inline-block"></span>
         <span class="text-white/70 text-sm ml-2">Agenda con disponibilidad limitada · Próximas fechas llenándose</span>
       </div>
 
-      <a href="https://wa.me/5492664202046?text=Hola!%20Quiero%20asegurar%20una%20fecha%20en%20LUZÉ%20para%20el%20cumpleaños%20de%20mi%20hijo"
+      <a href="https://wa.me/5492664202046?text=Hola!%20Quiero%20asegurar%20una%20fecha%20en%20LUZE%20para%20el%20cumplea%C3%B1os%20de%20mi%20hijo"
          target="_blank" rel="noopener"
-         class="btn-whatsapp-xl group inline-flex items-center gap-4 px-10 py-5 rounded-2xl font-bold text-xl">
+          class="btn-whatsapp-xl group inline-flex items-center gap-3 px-7 py-3.5 rounded-2xl font-bold text-lg sm:text-xl">
         <svg class="w-7 h-7 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
         Quiero asegurar mi fecha
       </a>
 
-      <p class="text-white/30 text-sm mt-6">Respuesta inmediata · Sin compromiso · 100% personalizado</p>
+      <p class="text-white/30 text-sm mt-2">Respuesta inmediata · Sin compromiso · 100% personalizado</p>
     </div>
   </section>
 
-
-  <!-- ============================================================
-       CONTACTO
+    <!-- ============================================================
+       UBICACION
   ============================================================ -->
-  <section id="contacto" class="py-28 bg-luze-mid/20 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6">
+  <section id="ubicacion" class="py-28 bg-luze-mid/20 relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="hero-glow hero-glow-1 absolute"></div>
+      <div class="hero-glow hero-glow-2 absolute"></div>
+    </div>
 
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
       <div class="text-center mb-20 reveal">
-        <span class="section-tag">Contacto y reservas</span>
+        <span class="section-tag">Ubicación y reserva</span>
         <h2 class="font-display font-black text-4xl sm:text-6xl text-white mt-4 leading-tight">
-          Escribinos, mirá el frente<br/>
-          <span class="gradient-text">y dejá tu fecha reservada.</span>
+          Encontrá el lugar.<br/>
+          <span class="gradient-text">Sentí la fiesta antes de entrar.</span>
         </h2>
         <p class="text-white/50 mt-4 max-w-2xl mx-auto text-lg">
-          Sumamos la ubicación exacta, el formulario de consulta y un espacio para la imagen del frente que querés añadir después.
+          Replanteamos este bloque para que la ubicación no sea un dato seco: te muestra la experiencia, la ruta y el formulario en un solo espacio.
         </p>
       </div>
 
-      <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+      <div class="grid xl:grid-cols-[1.15fr_0.85fr] gap-8 items-stretch">
         <div class="contact-card reveal reveal-left">
-          <div class="flex items-center gap-3 mb-6">
-            <img src="https://luze.yzz.me/Images/Icono%20BCKG%20negro.png" alt="LUZE" class="h-16 w-16 rounded-2xl bg-white p-2 object-contain shadow-lg" />
-            <div>
-              <p class="text-white font-bold text-xl">LUZE Eventos</p>
-              <p class="text-white/50 text-sm">San Luis, Argentina</p>
+          <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+            <div class="flex items-center gap-3">
+              <img src="https://luze.yzz.me/Images/Icono%20BCKG%20negro.png" alt="LUZE" class="h-16 w-16 rounded-2xl bg-white p-2 object-contain shadow-lg" />
+              <div>
+                <p class="text-white font-bold text-xl">LUZE Eventos</p>
+                <p class="text-white/50 text-sm">San Luis, Argentina</p>
+              </div>
+            </div>
+            <div class="location-meta">
+              <span class="location-chip location-chip--gold">Acceso fácil</span>
+              <span class="location-chip">Mapeo visual</span>
             </div>
           </div>
-          <div class="space-y-4 text-sm text-white/70">
-            <a href="https://maps.app.goo.gl/RmcZ95PuonPho9uE8" target="_blank" rel="noopener" class="contact-link">
-              <span class="contact-link-icon">
-                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 21s7-5.33 7-11a7 7 0 10-14 0c0 5.67 7 11 7 11z" />
-                  <circle cx="12" cy="10" r="2.5" />
-                </svg>
-              </span>
-              <span>Ver ubicación exacta en Google Maps</span>
-            </a>
-            <a href="tel:+5492664202046" class="contact-link">
-              <span class="contact-link-icon">
-                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.86 19.86 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.86 19.86 0 01-3.07-8.65A2 2 0 014.11 2h3a2 2 0 012 1.72c.12.9.34 1.77.65 2.6a2 2 0 01-.45 2.11L8.1 9.64a16 16 0 006.26 6.26l1.21-1.21a2 2 0 012.11-.45c.83.31 1.7.53 2.6.65A2 2 0 0122 16.92z"/>
-                </svg>
-              </span>
-              <span>+54 9 266 420-2046</span>
-            </a>
-            <a href="https://wa.me/5492664202046?text=Hola!%20Quiero%20información%20sobre%20LUZE%20Eventos" target="_blank" rel="noopener" class="contact-link">
-              <span class="contact-link-icon">
-                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2a10 10 0 00-8.66 15l-1.2 4.39 4.5-1.18A10 10 0 1012 2zm0 18a7.95 7.95 0 01-4.04-1.1l-.29-.17-2.67.7.71-2.61-.19-.3A8 8 0 1112 20zm4.16-5.75c-.23-.11-1.37-.68-1.58-.75-.21-.08-.36-.11-.52.12-.16.23-.6.75-.74.91-.14.16-.28.18-.51.06-.23-.11-.96-.36-1.83-1.14-.68-.6-1.13-1.35-1.27-1.58-.13-.23-.01-.35.1-.47.1-.1.23-.28.35-.42.12-.14.15-.24.24-.4.08-.16.04-.29-.02-.4-.06-.11-.51-1.23-.7-1.68-.18-.44-.36-.38-.5-.39h-.43c-.14 0-.4.05-.61.27-.21.23-.8.69-.8 1.67 0 .98.72 1.93.82 2.06.1.14 1.42 2.1 3.45 2.95.48.2.86.3 1.15.4.48.15.9.13 1.24.08.38-.06 1.18-.5 1.35-.98.17-.48.17-.9.12-.98-.05-.08-.18-.14-.4-.25z"/>
-                </svg>
-              </span>
-              <span>Escribí por WhatsApp y coordinamos</span>
-            </a>
-          </div>
-          <div class="mt-8 rounded-3xl overflow-hidden border border-white/10 bg-white/5 p-4">
-            <p class="text-white/60 text-sm mb-3">Imagen del frente para agregar después</p>
-            <div class="front-placeholder">
-              <span class="front-placeholder-icon">
-                <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M3 11l9-7 9 7" />
-                  <path d="M5 10v10h14V10" />
-                  <path d="M10 20v-6h4v6" />
-                </svg>
-              </span>
-              <span class="front-placeholder-text">Espacio reservado para la foto del frente</span>
+
+          <div class="location-scene">
+            <div class="location-scene-inner">
+              <div class="location-signal">
+                <div>
+                  <p class="text-white font-semibold">La llegada se siente clara desde el primer vistazo.</p>
+                  <p class="text-white/45 text-sm mt-1">Mapa real + frente del salón para ubicarte rápido sin ruido visual.</p>
+                </div>
+                <a href="https://maps.app.goo.gl/RmcZ95PuonPho9uE8" target="_blank" rel="noopener" class="location-chip location-chip--gold location-chip--action">
+                  <span>Abrir ruta</span>
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 19L19 5" />
+                    <path d="M9 5h10v10" />
+                  </svg>
+                </a>
+              </div>
+
+              <div class="location-visual-grid">
+                <a href="https://maps.app.goo.gl/RmcZ95PuonPho9uE8" target="_blank" rel="noopener" class="location-embed" aria-label="Abrir mapa interactivo de LUZÉ">
+                  <iframe
+                    title="Mapa de LUZÉ Pelotero & Eventos"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps?q=LUZ%C3%89%20Pelotero%20%26%20Eventos%20San%20Luis&output=embed">
+                  </iframe>
+                </a>
+
+                <div class="location-front">
+                  <img src="https://luze.yzz.me/Images/frente%20luze.jpg" alt="Frente de LUZÉ Pelotero & Eventos" />
+                  <div class="location-front-badge">
+                    <span class="location-chip">Frente del salón</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="location-details">
+                <div class="grid sm:grid-cols-3 gap-3">
+                  <a href="tel:+5492664202046" class="contact-link">
+                    <span class="contact-link-icon">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.86 19.86 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.86 19.86 0 01-3.07-8.65A2 2 0 014.11 2h3a2 2 0 012 1.72c.12.9.34 1.77.65 2.6a2 2 0 01-.45 2.11L8.1 9.64a16 16 0 006.26 6.26l1.21-1.21a2 2 0 012.11-.45c.83.31 1.7.53 2.6.65A2 2 0 0122 16.92z"/>
+                      </svg>
+                    </span>
+                    <span>+54 9 266 420-2046</span>
+                  </a>
+                  <a href="https://wa.me/5492664202046?text=Hola!%20Quiero%20consultar%20por%20LUZE%20Eventos" target="_blank" rel="noopener" class="contact-link">
+                    <span class="contact-link-icon">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2a10 10 0 00-8.66 15l-1.2 4.39 4.5-1.18A10 10 0 1012 2zm0 18a7.95 7.95 0 01-4.04-1.1l-.29-.17-2.67.7.71-2.61-.19-.3A8 8 0 1112 20zm4.16-5.75c-.23-.11-1.37-.68-1.58-.75-.21-.08-.36-.11-.52.12-.16.23-.6.75-.74.91-.14.16-.28.18-.51.06-.23-.11-.96-.36-1.83-1.14-.68-.6-1.13-1.35-1.27-1.58-.13-.23-.01-.35.1-.47.1-.1.23-.28.35-.42.12-.14.15-.24.24-.4.08-.16.04-.29-.02-.4-.06-.11-.51-1.23-.7-1.68-.18-.44-.36-.38-.5-.39h-.43c-.14 0-.4.05-.61.27-.21.23-.8.69-.8 1.67 0 .98.72 1.93.82 2.06.1.14 1.42 2.1 3.45 2.95.48.2.86.3 1.15.4.48.15.9.13 1.24.08.38-.06 1.18-.5 1.35-.98.17-.48.17-.9.12-.98-.05-.08-.18-.14-.4-.25z"/>
+                      </svg>
+                    </span>
+                    <span>WhatsApp directo</span>
+                  </a>
+                  <a href="tyc.html" class="contact-link">
+                    <span class="contact-link-icon">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12h6" />
+                        <path d="M12 9v6" />
+                        <rect x="3" y="4" width="18" height="16" rx="3" />
+                      </svg>
+                    </span>
+                    <span>TyC del sitio</span>
+                  </a>
+                </div>
+
+                <p class="location-note">
+                  La ubicación exacta queda a un toque. El objetivo es que alguien pueda ver el frente, abrir el mapa y reservar sin salir del sitio.
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="contact-card reveal">
+        <div class="contact-card contact-card--form reveal reveal-right">
           <div class="flex items-center justify-between gap-3 mb-6">
             <div>
-              <span class="section-tag">Formulario</span>
-              <h3 class="font-display font-bold text-2xl text-white mt-3">Contanos tu evento</h3>
+              <span class="section-tag">Formulario local</span>
+              <h3 class="font-display font-bold text-2xl text-white mt-3">Reservá sin vueltas</h3>
             </div>
-            <a href="https://elsitiodelpelotero.com/formws.asp?usuario=luzeeventos" target="_blank" rel="noopener" class="text-luze-gold text-sm font-semibold hover:text-white transition-colors">
-              Ver formulario oficial
-            </a>
           </div>
 
           <form id="contact-form" class="space-y-4">
@@ -770,53 +808,103 @@
 
             <div>
               <label for="cliente" class="contact-label">¿Cuál es tu nombre? *</label>
-              <input id="cliente" type="text" class="contact-input" placeholder="Nombre y apellido" required />
+              <input id="cliente" type="text" class="contact-input contact-input--animated" placeholder="Nombre y apellido" required />
             </div>
 
             <div>
               <label for="fecha" class="contact-label">Fecha del evento *</label>
-              <input id="fecha" type="date" class="contact-input" required />
+              <input id="fecha" type="date" class="contact-input contact-input--date contact-input--animated" min="2026-04-07" required />
+              <p class="mt-2 text-xs text-white/35">Elegí la fecha exacta para que podamos validar disponibilidad.</p>
             </div>
 
-            <div>
+            <div class="custom-select" data-select="evento">
               <label for="tipo" class="contact-label">Tipo de evento *</label>
-              <select id="tipo" class="contact-input" required>
-                <option>CUMPLE INFANTIL</option>
-                <option>BABY SHOWER</option>
-                <option>BAUTISMO</option>
-                <option>PRIMER AÑITO</option>
-                <option>PRIMER AÑITO y BAUTISMO</option>
-                <option>COMUNION</option>
-                <option>FIESTA TEENS</option>
-                <option>EGRESADOS</option>
-                <option>CUMPLE ADULTOS</option>
-                <option>CASAMIENTO</option>
-                <option>15 AÑOS</option>
-                <option>EMPRESARIALES</option>
-                <option>PRESENTACIÓN DE PRODUCTOS</option>
-                <option>OTRO</option>
-              </select>
+              <input type="hidden" id="tipo" value="" />
+              <button type="button" class="select-trigger contact-input--animated" aria-haspopup="listbox" aria-expanded="false">
+                <span class="select-trigger-value">Elegí tu evento</span>
+                <svg class="select-trigger-arrow w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <div class="select-panel" role="listbox" aria-label="Tipo de evento">
+                <button type="button" class="select-option" data-value="Cumple en LUZÉ">
+                  <span class="select-option-label">Cumple en LUZÉ</span>
+                  <span class="select-option-meta">Principal</span>
+                </button>
+                <button type="button" class="select-option" data-value="Mini cumple">
+                  <span class="select-option-label">Mini cumple</span>
+                  <span class="select-option-meta">Chico</span>
+                </button>
+                <button type="button" class="select-option" data-value="Cumple con amigos">
+                  <span class="select-option-label">Cumple con amigos</span>
+                  <span class="select-option-meta">Social</span>
+                </button>
+                <button type="button" class="select-option" data-value="Baby shower privado">
+                  <span class="select-option-label">Baby shower privado</span>
+                  <span class="select-option-meta">Familiar</span>
+                </button>
+                <button type="button" class="select-option" data-value="Bautismo / primera celebración">
+                  <span class="select-option-label">Bautismo / primera celebración</span>
+                  <span class="select-option-meta">Especial</span>
+                </button>
+                <button type="button" class="select-option" data-value="Comunión">
+                  <span class="select-option-label">Comunión</span>
+                  <span class="select-option-meta">Ceremonia</span>
+                </button>
+                <button type="button" class="select-option" data-value="Teen party">
+                  <span class="select-option-label">Teen party</span>
+                  <span class="select-option-meta">Adolescentes</span>
+                </button>
+                <button type="button" class="select-option" data-value="Graduación / egresados">
+                  <span class="select-option-label">Graduación / egresados</span>
+                  <span class="select-option-meta">Promo</span>
+                </button>
+                <button type="button" class="select-option" data-value="Adultos y familia">
+                  <span class="select-option-label">Adultos y familia</span>
+                  <span class="select-option-meta">Reunión</span>
+                </button>
+                <button type="button" class="select-option" data-value="Casamiento íntimo">
+                  <span class="select-option-label">Casamiento íntimo</span>
+                  <span class="select-option-meta">Celebración</span>
+                </button>
+                <button type="button" class="select-option" data-value="15 años">
+                  <span class="select-option-label">15 años</span>
+                  <span class="select-option-meta">Quince</span>
+                </button>
+                <button type="button" class="select-option" data-value="Empresa / marca">
+                  <span class="select-option-label">Empresa / marca</span>
+                  <span class="select-option-meta">Corporativo</span>
+                </button>
+                <button type="button" class="select-option" data-value="Presentación especial">
+                  <span class="select-option-label">Presentación especial</span>
+                  <span class="select-option-meta">Lanzamiento</span>
+                </button>
+                <button type="button" class="select-option" data-value="Otro formato">
+                  <span class="select-option-label">Otro formato</span>
+                  <span class="select-option-meta">A medida</span>
+                </button>
+              </div>
             </div>
 
             <div class="grid sm:grid-cols-2 gap-4">
               <div>
                 <label for="edad" class="contact-label">Edad del agasajado/a *</label>
-                <input id="edad" type="number" min="0" class="contact-input" placeholder="Edad" required />
+                <input id="edad" type="number" min="0" max="199" class="contact-input contact-input--animated" placeholder="Edad" required />
               </div>
               <div>
                 <label for="invitados" class="contact-label">Cantidad de niños *</label>
-                <input id="invitados" type="number" min="0" class="contact-input" placeholder="Niños" required />
+                <input id="invitados" type="number" min="0" class="contact-input contact-input--animated" placeholder="Niños" required />
               </div>
             </div>
 
             <div>
               <label for="invitadosadultos" class="contact-label">Cantidad de adultos *</label>
-              <input id="invitadosadultos" type="number" min="0" class="contact-input" placeholder="Adultos" required />
+              <input id="invitadosadultos" type="number" min="0" class="contact-input contact-input--animated" placeholder="Adultos" required />
             </div>
 
             <div>
               <label for="consulta" class="contact-label">Tu consulta</label>
-              <textarea id="consulta" class="contact-input min-h-[140px] resize-y" placeholder="Contanos la temática, horarios, dudas o cualquier detalle extra."></textarea>
+              <textarea id="consulta" class="contact-input contact-input--animated min-h-[140px] resize-y" placeholder="Contanos la temática, horarios, dudas o cualquier detalle extra."></textarea>
             </div>
 
             <p class="text-white/40 text-xs">(*) Datos obligatorios</p>
@@ -825,69 +913,6 @@
             </button>
           </form>
         </div>
-
-        <div class="contact-card reveal reveal-right">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="icon-chip icon-chip--animated">
-              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 21s7-5.33 7-11a7 7 0 10-14 0c0 5.67 7 11 7 11z" />
-                <circle cx="12" cy="10" r="2.5" />
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-display font-bold text-2xl text-white">Ubicación</h3>
-              <p class="text-white/50 text-sm">Llegá fácil con el mapa directo</p>
-            </div>
-          </div>
-
-          <a href="https://maps.app.goo.gl/RmcZ95PuonPho9uE8" target="_blank" rel="noopener" class="map-card">
-            <span class="map-card-kicker">Abrir mapa</span>
-            <span class="map-card-title">Luze Eventos</span>
-            <span class="map-card-copy">Tocá y abrí la navegación en tu celular o compártelo por WhatsApp.</span>
-          </a>
-
-          <div class="mt-8 rounded-3xl border border-white/10 bg-white/5 p-6">
-            <p class="text-white/70 font-semibold mb-2">Consulta oficial</p>
-            <p class="text-white/40 text-sm leading-relaxed">
-              El formulario local replica los campos del formulario de WhatsApp original para que la reserva quede rápida y clara.
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       LEGAL
-  ============================================================ -->
-  <section id="legal" class="py-20">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-10 reveal">
-        <span class="section-tag">Legal</span>
-        <h2 class="font-display font-black text-3xl sm:text-5xl text-white mt-4">
-          Cookies y términos
-          <span class="gradient-text">del sitio web.</span>
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-6">
-        <details class="legal-card reveal reveal-left">
-          <summary class="legal-summary">Política de cookies</summary>
-          <div class="legal-body">
-            <p>Este sitio usa cookies esenciales para recordar tu preferencia del banner y mejorar la experiencia de navegación.</p>
-            <p>También podemos utilizar métricas básicas de uso para entender qué secciones son más consultadas y mejorar el contenido.</p>
-          </div>
-        </details>
-
-        <details class="legal-card reveal reveal-right">
-          <summary class="legal-summary">Términos y condiciones</summary>
-          <div class="legal-body">
-            <p>La información publicada en este sitio es orientativa y puede cambiar sin aviso previo.</p>
-            <p>Las reservas quedan sujetas a disponibilidad, confirmación por WhatsApp y aceptación de las condiciones particulares de cada evento.</p>
-          </div>
-        </details>
       </div>
     </div>
   </section>
@@ -911,11 +936,8 @@
             Fiestas infantiles completas en San Luis, Argentina. Diversión total, sin estrés para los papás.
           </p>
           <div class="flex gap-4 mt-6">
-            <a href="#" class="social-icon" aria-label="Instagram">
+            <a href="https://www.instagram.com/luze.peloter0/" class="social-icon" aria-label="Instagram">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            </a>
-            <a href="#" class="social-icon" aria-label="Facebook">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
             <a href="https://wa.me/5492664202046" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -967,7 +989,7 @@
       <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8">
         <p class="text-white/20 text-sm">© 2025 LUZÉ Pelotero & Eventos · San Luis, Argentina</p>
         <div class="flex items-center gap-4 text-white/20 text-xs">
-          <a href="#legal" class="hover:text-white transition-colors">Cookies y términos</a>
+          <a href="tyc.html" class="hover:text-white transition-colors">Términos</a>
           <span>Hecho para las familias de San Luis</span>
         </div>
       </div>
@@ -985,7 +1007,7 @@
     </div>
     <div class="cookie-banner-actions">
       <button id="cookie-accept" type="button" class="cookie-banner-button cookie-banner-button--primary">Aceptar</button>
-      <a href="#legal" class="cookie-banner-button">Ver términos</a>
+      <a href="tyc.html" class="cookie-banner-button">Ver términos</a>
     </div>
   </div>
 

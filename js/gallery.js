@@ -18,42 +18,36 @@
     {
       type: 'gradient',
       gradient: 'linear-gradient(135deg, #FF6B5B 0%, #F5C842 50%, #7B5EA7 100%)',
-      emoji: '🎠',
       title: 'Carrusel infantil',
       description: 'Nuestro diferencial exclusivo. El único en San Luis.'
     },
     {
       type: 'gradient',
       gradient: 'linear-gradient(135deg, #7B5EA7 0%, #FF6B5B 100%)',
-      emoji: '🏰',
       title: 'Pelotero gigante',
       description: 'Enorme, colorido y seguro para todos los chicos.'
     },
     {
       type: 'gradient',
       gradient: 'linear-gradient(135deg, #F5C842 0%, #FF6B5B 100%)',
-      emoji: '🎭',
       title: 'Show de animación',
       description: 'Animadores profesionales que mantienen la fiesta encendida.'
     },
     {
       type: 'gradient',
       gradient: 'linear-gradient(135deg, #25D366 0%, #7B5EA7 100%)',
-      emoji: '🎪',
       title: 'Inflables grandes',
       description: 'Toboganes y castillos de primera línea para todos.'
     },
     {
       type: 'gradient',
       gradient: 'linear-gradient(135deg, #1A1025 0%, #7B5EA7 30%, #FF6B5B 70%, #F5C842 100%)',
-      emoji: '🎂',
       title: 'El momento especial',
       description: 'Ese instante único que todos recuerdan para siempre.'
     },
     {
       type: 'gradient',
       gradient: 'linear-gradient(135deg, #FF6B5B 0%, #F5C842 100%)',
-      emoji: '🛋️',
       title: 'Sector adultos',
       description: 'Cómodo y equipado para que los papás también disfruten.'
     }
@@ -92,9 +86,11 @@
       lightboxContent.innerHTML = `
         <div class="lightbox-placeholder" style="background: ${item.gradient}">
           <div class="lightbox-placeholder-inner">
-            <span class="text-7xl">${item.emoji}</span>
-            <p class="font-display font-bold text-2xl text-white mt-4">${item.title}</p>
-            <p class="text-white/70 mt-2 text-base">${item.description}</p>
+            <div class="lightbox-placeholder-orb"></div>
+            <div class="lightbox-placeholder-frame">
+              <p class="font-display font-bold text-2xl text-white">${item.title}</p>
+              <p class="text-white/72 mt-2 text-base">${item.description}</p>
+            </div>
           </div>
         </div>
         <div class="lightbox-caption">
@@ -267,11 +263,47 @@
         align-items: center;
         justify-content: center;
         border-radius: 1.5rem 1.5rem 0 0;
+        position: relative;
+        overflow: hidden;
       }
 
       .lightbox-placeholder-inner {
+        position: relative;
         text-align: center;
         padding: 3rem;
+        display: grid;
+        place-items: center;
+        gap: 1rem;
+        width: 100%;
+        min-height: 400px;
+      }
+
+      .lightbox-placeholder-orb {
+        position: absolute;
+        inset: auto auto 2rem 50%;
+        transform: translateX(-50%);
+        width: 12rem;
+        height: 12rem;
+        border-radius: 9999px;
+        background:
+          radial-gradient(circle at 30% 30%, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.1) 24%, transparent 62%),
+          linear-gradient(145deg, rgba(255,255,255,0.18), rgba(255,255,255,0.02));
+        filter: blur(0.2px);
+        opacity: 0.85;
+        box-shadow:
+          0 0 0 1px rgba(255,255,255,0.12),
+          0 24px 60px rgba(0,0,0,0.2);
+      }
+
+      .lightbox-placeholder-frame {
+        position: relative;
+        z-index: 1;
+        max-width: 32rem;
+        padding: 1.5rem 1.75rem;
+        border-radius: 1.25rem;
+        background: rgba(0, 0, 0, 0.22);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        backdrop-filter: blur(12px);
       }
 
       .lightbox-caption {

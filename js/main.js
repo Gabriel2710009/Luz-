@@ -21,6 +21,8 @@
   const cookieBanner = document.getElementById('cookie-banner');
   const cookieAccept = document.getElementById('cookie-accept');
   const waFloat = document.getElementById('whatsapp-float');
+  const customSelects = document.querySelectorAll('.custom-select');
+  const legalCards = document.querySelectorAll('.legal-card');
 
   const WHATSAPP_NUMBER = '5492664202046';
   const COOKIE_KEY = 'luze_cookie_consent';
@@ -44,20 +46,33 @@
   }, { passive: true });
   updateNavbar();
 
+  const fechaInput = document.getElementById('fecha');
+  if (fechaInput) {
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    fechaInput.min = `${yyyy}-${mm}-${dd}`;
+  }
+
   function openMenu() {
     menuOpen = true;
     mobileMenu?.classList.add('open');
+    mobileMenu?.setAttribute('aria-hidden', 'false');
     menuToggle?.classList.add('open');
     menuToggle?.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
   }
 
   function closeMenu() {
     menuOpen = false;
     mobileMenu?.classList.remove('open');
+    mobileMenu?.setAttribute('aria-hidden', 'true');
     menuToggle?.classList.remove('open');
     menuToggle?.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
   }
 
   menuToggle?.addEventListener('click', () => {
@@ -99,6 +114,61 @@
     });
   });
 
+  function closeAllCustomSelects(except = null) {
+    customSelects.forEach((select) => {
+      if (select === except) return;
+      const trigger = select.querySelector('.select-trigger');
+      const panel = select.querySelector('.select-panel');
+      trigger?.classList.remove('open');
+      trigger?.setAttribute('aria-expanded', 'false');
+      panel?.classList.remove('open');
+    });
+  }
+
+  customSelects.forEach((select) => {
+    const trigger = select.querySelector('.select-trigger');
+    const valueNode = select.querySelector('.select-trigger-value');
+    const panel = select.querySelector('.select-panel');
+    const hiddenInput = select.querySelector('input[type="hidden"]');
+    const options = select.querySelectorAll('.select-option');
+
+    if (!trigger || !valueNode || !panel || !hiddenInput) return;
+
+    trigger.addEventListener('click', () => {
+      const willOpen = !panel.classList.contains('open');
+      closeAllCustomSelects(select);
+      trigger.classList.toggle('open', willOpen);
+      trigger.setAttribute('aria-expanded', String(willOpen));
+      panel.classList.toggle('open', willOpen);
+    });
+
+    options.forEach((option) => {
+      option.addEventListener('click', () => {
+        const label = option.getAttribute('data-value') || option.textContent.trim();
+        hiddenInput.value = label;
+        valueNode.textContent = label;
+
+        options.forEach((item) => item.classList.toggle('is-selected', item === option));
+        trigger.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+        panel.classList.remove('open');
+      });
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    const clickedInsideSelect = event.target.closest?.('.custom-select');
+    if (!clickedInsideSelect) {
+      closeAllCustomSelects();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeAllCustomSelects();
+    }
+  });
+
   const sections = document.querySelectorAll('section[id]');
 
   function setActiveLink() {
@@ -123,6 +193,22 @@
     if (parts.length !== 3) return value;
     return `${parts[2]}/${parts[1]}/${parts[0]}`;
   }
+
+  legalCards.forEach((card) => {
+    const summary = card.querySelector('.legal-summary');
+    if (!summary) return;
+
+    summary.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      const shouldOpen = !card.open;
+      legalCards.forEach((other) => {
+        other.open = false;
+      });
+
+      card.open = shouldOpen;
+    });
+  });
 
   if (contactForm) {
     contactForm.addEventListener('submit', (event) => {
